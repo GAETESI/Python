@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador Flask</title>
+</head>
+<body>   
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 30px;
+            
+          }
+        header{
+            font-size: 50px;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            gap: 20px;
+        }
+        .reset{
+            width: 80px;
+            height: 50px;
+            color: white;
+            background-color: green;
+        }
+        .add{
+            width: 80px;
+            height: 50px;
+            color: white;
+            background-color: red;
+        }
+    
+    </style>
+    <header> Counter </header>
+    <p>{{session['counter']}} times</p>
+    <div class="button"><form action="/incrementar" method="post">
+        <button type="submit" class="add">Add two visit</button>
+    </form>
+    <form action="/destroy_session" method="post">
+        <button type="submit" class="reset">Reset</button>
+    </div>
+    </form>
+</body>
+</html>
