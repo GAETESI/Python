@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    
+  }
+
+
+.card {
+  width: 300px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #a1d5ef;
+  
+
+}
+
+h1{
+    text-decoration: underline;
+    color: blue;
+}
+
+.button{
+    background-color: blue;
+    width: 100px;
+    height: 60px;
+}
+
+a{
+    color: azure;
+}

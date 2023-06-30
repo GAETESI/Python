@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='success.css') }}">
+</head>
+<body>
+    <div class="container">
+    <div class="card">
+        <h1>Submitted info</h1>
+        <h2 class="card-title">Survey Results</h2>
+        <p class="card-text">Name: {{session['name']}}</p>
+        <p class="card-text">Dojo Location: {{session['location']}}</p>
+        <p class="card-text">Favorite Language: {{session['language']}}</p>
+        <p class="card-text">Comments: {{session['comments']}}</p>
+        <button class="button"><a href="{{ url_for('index') }}">GO BACK</a> </button>
+    </div>
+    </div>  
+</body>
+</html>

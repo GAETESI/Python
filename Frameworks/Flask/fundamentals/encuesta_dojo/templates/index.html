@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+</head>
+<body>
+    <div class="container">
+    <form action="/process" method="post" class="login-form">
+    <h1>Dojo Survey</h1>   
+        <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="location">Dojo Location</label>
+            <select name="location" class="form-control">
+                <option value="">--SELECT ONE--</option>
+                <option value="San_Jose">San Jose</option>
+                <option value="Santiago">Santiago</option>
+                <option value="Buenos_Aires">Buenos Aires</option>
+            </select>    
+        </div>
+        <div class="form-group">
+            <label for="language">Favorite Language:</label>
+            <select name="language"  class="form-control">
+                <option value="">--SELECT ONE--</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="comments">Comments:</label>
+            <textarea name="comments" class="form-control"></textarea>
+        </div>       
+        <input type="submit" value="Submit" class="submit">
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flash-messages">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+    </form>
+</div>
+</body>
+</html>
